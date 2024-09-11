@@ -32,6 +32,10 @@ def meteo():
 def mongraphique():
     return render_template("graphique.html")
 
+@app.route('/commits/')
+def index():
+    return render_template('commits.html')
+
 @app.route('/extract-minutes/<date_string>')
 def extract_minutes(date_string):
     try:
